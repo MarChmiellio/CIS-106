@@ -2,7 +2,7 @@
 # This program asks for the original purchase price per share, the current stock price, and the number of shares owned.
 # Calculates how much the investement has increased or decreased.
 
-purchase_price = floalt(input("Enter the purchase price per share: $"))
+purchase_price = float(input("Enter the purchase price per share: $"))
 current_price = float(input("Enter the current stock price per share: $"))
 qunatity = int(input("Enter the number of shares: "))
 
