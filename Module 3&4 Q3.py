@@ -7,3 +7,6 @@ midterm = float(input("Enter the midterm score: "))
 final_exam = float(input("Enter the final exam score: "))
 
 total_exam_points = (midterm * .40) + (final_exam * 0.60)
+
+print(f"Students last name: {last_name}")
+print(f"Total exan points: {total_exam_points:.2f}")
