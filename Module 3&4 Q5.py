@@ -4,7 +4,7 @@
 
 purchase_price = float(input("Enter the purchase price per share: $"))
 current_price = float(input("Enter the current stock price per share: $"))
-qunatity = int(input("Enter the number of shares: "))
+quantity = int(input("Enter the number of shares: "))
 
 gain_or_loss = (current_price - purchase_price) * quantity
 
