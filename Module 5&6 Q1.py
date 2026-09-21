@@ -5,7 +5,8 @@ else:
   unit_price = 5.00
 extended_price = quantity * unit_price
 tax = extended_price * .07
-print("Quantity:", uantity)
+total = extended_price + tax
+print("Quantity:", quantity)
 print(f"Unit Price: ${unit_price:.2f}")
 print(f"Extended Price: ${extended_price:.2f}")
 print(f"Tax: ${tax:.2f}")
