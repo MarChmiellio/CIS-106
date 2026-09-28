@@ -1,0 +1,12 @@
+Jones
+I
+12
+Admas
+I
+10
+Baker
+0
+12
+Smith
+0
+16
