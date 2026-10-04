@@ -14,7 +14,7 @@ def compute_total(msrp, make, model, electric_code):
   return total
 total_msrp = 0
 total_sales_price = 0
-answer = input)"Do you want to enter a vehicle? Yes or No: ")
+answer = input("Do you want to enter a vehicle? Yes or No: ")
 while answer == "Yes":
   make = input"Enter make: ")
   model = input("Enter model: ")
