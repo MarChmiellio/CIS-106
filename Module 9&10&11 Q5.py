@@ -1,6 +1,6 @@
 def  compute_discount(quantity, price, discount_rate):
   extended_price = quantity * price
-  discount_amount = extended_price * discounted_rate
+  discount_amount = extended_price * discount_rate
   discounted_price = extended_price - discount_amount
   return discount_amount, discounted_price
 quantity = int(input("Enter quantity: "))
