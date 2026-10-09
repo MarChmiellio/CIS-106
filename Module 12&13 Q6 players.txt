@@ -1,0 +1,10 @@
+Smith 0.267
+Jhonson 0.300
+Chmiel 0.285
+Bukowski 0.312
+Snopek 0.276
+Steliha 0.298
+Anderson 0.321
+Koshy 0.254
+Lewandowski 0.289
+Olise 0.305
