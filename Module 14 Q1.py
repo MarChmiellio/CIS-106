@@ -7,7 +7,7 @@ class Employee:
   def bonus(self, rate):
     b = float(rate) * float(self.pay)
     return b
-emp1 = Employee('Michael', 'Chmiel', 75000.00)
+emp1 = Employee('Michael', 'Chmiel', 60000.00)
 print(emp1.email)
 print(emp1.first)
 print(emp1.last)
