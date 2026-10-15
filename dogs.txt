@@ -1,0 +1,4 @@
+Name|Breed|Age|Weight
+Josh|German|Shorthaired Pointer|8|55.0
+Noodle|Cockapoo|3|25.0
+Bela|Poodle|12|20.0
