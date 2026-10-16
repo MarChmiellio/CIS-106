@@ -20,7 +20,6 @@ def load_dogs():
       pass
   return dogs
 def save_dogs(dogs):
-    """Save all current dogs to a text file, one dog per line."""
     with open(FILE_NAME, "w") as file:
       file.write("Name|Breed|Age|Weight\n")
       for dog in dogs:
@@ -37,43 +36,41 @@ def menu():
     print("5. Quit")
     return input("Select a choice: ").strip()
 def add_dog(dogs):
-  """Ask for dog information and add a new dog to the list."""
-  name = input("Dog Name: ").strip()
-  if name == "" or "|" in name:
-    print("Please enter a valid dog name.")
-    return
-  for dog in dogs:
-      if dog["name"].lower() == name.lower():
-          print("A dog with that name already exists.")
-          return
-  breed = input("Dog Breed: ").strip()
-  if breed == "" or "|" in breed:
-      print("Please enter a valid breed.")
-      return
-  while True:
-      try:
-          age = int(input("Age (years): "))
-          if age >= 0:
+    name = input("Dog Name: ").strip()
+    if name == "" or "|" in name:
+        print("Please enter a valid dog name.")
+        return
+    for dog in dogs:
+        if dog["name"].lower() == name.lower():
+            print("A dog with that name already exists.")
+            return
+    breed = input("Dog Breed: ").strip()
+    if breed == "" or "|" in breed:
+        print("Please enter a valid breed.")
+        return
+    while True:
+        try:
+            age = int(input("Age (years): "))
+            if age >= 0:
+                break
+            print("Age cannot be negative.")
+        except ValueError:
+            print("Please enter a whole number for age.")
+    while True:
+        try:
+            weight = float(input("Weight (lbs): "))
+            if weight > 0:
               break
-          print("Age cannot be negative.")
-      except ValueError:
-          print("Please enter a whole number for age.")
-  while True:
-    try:
-        weight = float(input("Weight (lbs): "))
-        if weight > 0:
-          break
-        print("Weight must be greater than zero.")
-    except ValueError:
-        print("Please enter a number for weight.")
-  new_dog = {"name": name, "breed": breed, "age": age, "weight": weight}
-  dogs.append(new_dog)
-  print(name + " was added successfully!")  
+            print("Weight must be greater than zero.")
+        except ValueError:
+            print("Please enter a number for weight.")
+    new_dog = {"name": name, "breed": breed, "age": age, "weight": weight}
+    dogs.append(new_dog)
+    print(name + " was added successfully!")  
 def view_dogs(dogs):
-    """Display all dogs in an easy-to-read table."""
     if len(dogs) == 0:
-      print("\nThere are no dogs in the rescue.")
-      return
+        print("\nThere are no dogs in the rescue.")
+        return
     print("\nRescue Dogs")
     print("-" * 69)
     print("{:<18} {:<27} {:>7} {:>11}".format(
@@ -83,7 +80,6 @@ def view_dogs(dogs):
         print("{:<18} {:<27} {:>7} {:>11}".format(
             dog["name"], dog["breed"], dog["age"], dog["weight"]))
 def find_dog(dogs):
-    """Search for a dog by name and display its information."""
     name = input("Enter dog name to search: ").strip()
     for dog in dogs:
         if dog["name"].lower() == name.lower():
@@ -94,7 +90,6 @@ def find_dog(dogs):
           return
     print("Sorry, unable to find " + name)
 def delete_dog(dogs):
-    """Find a dog by name and remove it from the list."""
     name = input("Enter dog name to delete: "). strip()
     for dog in dogs:
         if dog["name"].lower() == name.lower():
@@ -103,7 +98,6 @@ def delete_dog(dogs):
             return
     print("Sorry, unable to find " + name)
 def main():
-    """Start the application and keep the menu running until Quit."""
     dogs = load_dogs()
     while True:
         choice = menu()
