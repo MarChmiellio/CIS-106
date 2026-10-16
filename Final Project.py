@@ -15,7 +15,8 @@ def load_dogs():
                   }
                   dogs.append(dog)
               except ValueError:
-                  print("Skipping an invalid record in the file.")    except FileNotFoundError:
+                  print("Skipping an invalid record in the file.")    
+  except FileNotFoundError:
       pass
   return dogs
 def save_dogs(dogs):
@@ -23,17 +24,18 @@ def save_dogs(dogs):
     with open(FILE_NAME, "w") as file:
       file.write("Name|Breed|Age|Weight\n")
       for dog in dogs:
-          file.write(dog["name"] + "|" + dog["breed"] + "|" +                            str(dog["age"]) + "|" + str(dog["weight"]) + "\n")
+          file.write(dog["name"] + "|" + dog["breed"] + "|" +                            
+                     str(dog["age"]) + "|" + str(dog["weight"]) + "\n")
 def menu():
     """Display the choices and get the user's selection."""
-  print("\nDog Rescue")
-  print("----------")
-  print("1. Add a Dog")
-  print("2. View Dogs")
-  print("3. Find Dog")
-  print(4. Delete Dog")
-  print(5. Quit")
-  return input("Select a choice: ").strip()
+    print("\nDog Rescue")
+    print("----------")
+    print("1. Add a Dog")
+    print("2. View Dogs")
+    print("3. Find Dog")
+    print("4. Delete Dog")
+    print("5. Quit")
+    return input("Select a choice: ").strip()
 def add_dog(dogs):
   """Ask for dog information and add a new dog to the list."""
   name = input("Dog Name: ").strip()
@@ -58,10 +60,10 @@ def add_dog(dogs):
           print("Please enter a whole number for age.")
   while True:
     try:
-        weight = float(input("Weight (Ibs): "))
+        weight = float(input("Weight (lbs): "))
         if weight > 0:
-            break
-      print("Weight must be greater than zero.")
+          break
+        print("Weight must be greater than zero.")
     except ValueError:
         print("Please enter a number for weight.")
   new_dog = {"name": name, "breed": breed, "age": age, "weight": weight}
