@@ -26,7 +26,6 @@ def save_dogs(dogs):
           file.write(dog["name"] + "|" + dog["breed"] + "|" +                            
                      str(dog["age"]) + "|" + str(dog["weight"]) + "\n")
 def menu():
-    """Display the choices and get the user's selection."""
     print("\nDog Rescue")
     print("----------")
     print("1. Add a Dog")
